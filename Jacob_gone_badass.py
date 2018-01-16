@@ -39,7 +39,7 @@ for i in range ( Nnumbers ) :
     y = 1.1
     while (np.exp(-x_hitmiss[i])*pow(np.cos(x_hitmiss[i]),2) < y) :      # ...so keep making new numbers, until this is fulfilled!
         x_hitmiss[i] = -np.log(r.uniform())
-        y  = np.exp(-x_hitmiss[i])*pow(np.cos(x_hitmiss[i]),2)
+        y = r.uniform(0,np.exp(-x_hitmiss[i]))
         Nhit += 1
         
        
